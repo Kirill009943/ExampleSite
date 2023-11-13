@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adapt.css">
+    <title>Savorville</title>
+    <link rel="icon" href=".\data\images\other\logo.svg">
+</head>
+
+<body>
+    <div class="account_main" id="account">
+        <div class="account_frame">
+            <div class="account_text">Мои данные</div>
+            <div class="account_form">
+                <div class="account_text2">Имя</div>
+                <input type="text" class="account_input" name="" id="" placeholder="Ваше имя">
+            </div>
+            <div class="account_form">
+                <div class="account_text2">Email</div>
+                <input type="text" class="account_input" name="" id="" placeholder="Ваш Email">
+            </div>
+            <div class="account_form">
+                <div class="account_text2">Телефон</div>
+                <input type="text" class="account_input" name="" id="" placeholder="Ваш телефон">
+            </div>
+            <div class="account_form">
+                <div class="account_text2">Адрес доставки</div>
+                <input type="text" class="account_input" name="" id="" placeholder="Ваш адрес">
+            </div>
+            <div class="account_form">
+                <button class="account_button ab1" onclick="openAccount('account');">Сохранить</button>
+                <button class="account_button ab2" onclick="openAccount('account');">Отмена</button>
+                <button class="account_button ab2"><a class="regbtn" href="registration.html">Регистрация</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="account_main" id="bron">
+        <div class="account_frame bron">
+            <div class="account_text">Бронирование</div>
+            <div class="bron_text">Извините, на данный момент онлайн-бронирование недоступно на сайте.
+                Пожалуйста позвоните по телефону.</div>
+            <button class="account_button ab2" onclick="openAccount('bron');">Ок</button>
+        </div>
+    </div>
+    <div class="header">
+        <img class="logo" src=".\data\images\other\logo.svg" height="70" width="70">
+        <div class="title">Savorville</div>
+        <div class="menu">
+            <a class="menubtn" onclick="openAccount('account');" href="#"> АККАУНТ</a>
+            <a class="menubtn" href="#onas">О НАС</a>
+            <a class="menubtn" href="#bluda">БЛЮДА</a>
+            <a class="menubtn" onclick="openAccount('bron');" href="#">ЗАБРОНИРОВАТЬ</a>
+        </div>
+        <div class="cartval" id="cartval">0</div>
+        <a class="cartbtn" onclick="cartfunc();"><img src=".\data\images\other\shopping-cart.svg" height="50"
+                width="50"></a>
+        <div class="contacts">8(800)-555-35-35</div>
+    </div>
+    <div class="headpanel">
+        <div class="title2">РЕСТОРАН "SAVORVILLE"</div>
+        <a class="buybtn" href="#bluda">Цены</a>
+    </div>
+    <main>
+        <div class="onas">
+            <div id="onas" class="onastitle">О НАС</div>
+            <div class="onastext">
+                <p>"Savorville" – это уютный ресторан, где каждый гость сможет насладиться настоящей
+                    гастрономической
+                    экскурсией. Мы стремимся создать атмосферу изысканности и удовольствия, где каждая деталь,
+                    начиная
+                    от интерьера до подачи блюд, продумывается с заботой и страстью к еде.</p>
+                <p>Наш ресторан располагается в историческом центре города, окруженном живописными улочками и
+                    культурными достопримечательностями. Входные двери ведут в просторный и стильно оформленный зал
+                    с
+                    комфортными столами и мягкими креслами. Интерьер сочетает современные элементы с традиционными
+                    деталями, создавая уютную и привлекательную атмосферу для наших гостей.</p>
+                <p>Мы специализируемся на кулинарных изысках и предлагаем разнообразие блюд, которые отражают
+                    международные кухонные традиции. Наш шеф-повар и его талантливая команда придают особое внимание
+                    качеству продуктов, выбирая только свежие и натуральные ингредиенты для приготовления блюд. Меню
+                    регулярно обновляется, чтобы удовлетворить самый изысканный вкус и предложить новые кулинарные
+                    открытия.</p>
+                <p>Мы предлагаем уникальные винные подборки, которые позволяют наслаждаться идеальными сочетаниями
+                    вин и
+                    блюд. Наш профессиональный персонал с удовольствием поделится своим экспертным знанием и поможет
+                    вам
+                    с выбором.</p>
+                <p>"Savorville" также предоставляет возможность проведения частных мероприятий и вечеринок.
+                    Независимо
+                    от того, это свадьба, день рождения или корпоративный вечер, мы готовы создать незабываемые
+                    впечатления и предложить кулинарные изыски, соответствующие вашим пожеланиям и требованиям.</p>
+                <p>Наша цель - создать место, где каждый гость почувствует себя особенным, будь то романтический
+                    ужин
+                    вдвоем, встреча с друзьями или деловой обед. Мы стремимся сделать каждый приход в "Savorville"
+                    настоящим праздником для всех чувств и вкусовых рецепторов.</p>
+                <p>Добро пожаловать в "Savorville", где каждый глоток и каждая тарелка станут настоящим кулинарным
+                    путешествием!</p>
+            </div>
+            <div class="onasimage"></div>
+            <div id="bluda" class="onastitle">БЛЮДА</div>
+            <button class="bluda_button" onclick="hidepanel('tovar_zavtraki');">Завтраки</button>
+            <div class="tovar_mainbody" id="tovar_zavtraki">
+                <div class="text_tovar_">Блины</div>
+                <div class="tovar_body" id="tovar_zavtraki_blini"></div>
+                <div class="text_tovar_">Сырники и запеканки</div>
+                <div class="tovar_body" id="tovar_zavtraki_sirniki"></div>
+                <div class="text_tovar_">Выпечка</div>
+                <div class="tovar_body" id="tovar_zavtraki_vipechka"></div>
+            </div>
+
+            <button class="bluda_button" onclick="hidepanel('tovar_salats');">Салаты</button>
+            <div class="tovar_mainbody" id="tovar_salats">
+                <div class="text_tovar_">Салаты</div>
+                <div class="tovar_body" id="tovar_salats_f"></div>
+            </div>
+
+            <button class="bluda_button" onclick="hidepanel('tovar_soups');">Супы</button>
+            <div class="tovar_mainbody" id="tovar_soups">
+                <div class="text_tovar_">Супы</div>
+                <div class="tovar_body" id="tovar_soups_f"></div>
+            </div>
+
+            <button class="bluda_button" onclick="hidepanel('tovar_pasta');">Пасты и воки</button>
+            <div class="tovar_mainbody" id="tovar_pasta">
+                <div class="text_tovar_">Пасты и воки</div>
+                <div class="tovar_body" id="tovar_pasta_f"></div>
+            </div>
+
+            <button class="bluda_button" onclick="hidepanel('tovar_shaurma');">Шаурма и сэндвичи</button>
+            <div class="tovar_mainbody" id="tovar_shaurma">
+                <div class="text_tovar_">Шаурма</div>
+                <div class="tovar_body" id="tovar_shaurma_sh"></div>
+                <div class="text_tovar_">Сэндвичи</div>
+                <div class="tovar_body" id="tovar_shaurma_se"></div>
+            </div>
+        </div>
+    </main>
+    <footer class="foot">All rights reserved</footer>
+    <script src="code.js"></script>
+</body>
+
+</html>
